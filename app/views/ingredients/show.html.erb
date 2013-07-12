@@ -2,5 +2,8 @@
 
 Used in:
 <ul>
-  <li>Recipe Name</li> <!-- This should link to the recipe show page -->
+	<%@ingredient.recipes.each do |recipe|%>
+  	<li><%=recipe.name%></li>
+  <%end%>
+  <!-- This should link to the recipe show page -->
 </ul>

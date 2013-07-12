@@ -1,1 +1,12 @@
 <!-- A view that shows you all the ingredients in a recipe. -->
+
+<h1><%=@recipe.name%></h1>
+
+<a href="/recipes">Back</a>
+
+<ul>
+	<%@recipe.ingredients.each do |ingredient|%>
+		<li><a href="/ingredients/<%=ingredient.id%>"><%=ingredient.name%></a></li>
+	<% end %>
+</ul>
+

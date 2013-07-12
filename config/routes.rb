@@ -1,5 +1,7 @@
 RecipesLab::Application.routes.draw do
   resources :recipes
+  get 'ingredients' => 'ingredients#index'
+  get 'ingredients/:id' => 'ingredients#show'
 
 
   # The priority is based upon order of creation:

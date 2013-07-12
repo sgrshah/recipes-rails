@@ -12,22 +12,23 @@ If you get clever, you can have 1 text box behave both ways, capable of adding a
 
 -->
 
-<form>
+<form action="/recipes" method="POST">
   <p>
-    <label>Recipe Name</label>
-    <input type="text">
+    <%= label_tag "recipe[name]", "Recipe Name:" %>
+    <%= text_field_tag "recipe[name]"%>
   </p>
 
   <p>
-    <label>Ingredients</label>
+    <%= label_tag "ingredients[]", "Ingredients:"%>
     <ul>
-      <li><input></li>
-      <li><input></li>
-      <li><input></li>
-      <li><input></li>
-      <li><input></li>
+      <li><%=text_field_tag "ingredients[]"%></li>
+      <li><%=text_field_tag "ingredients[]"%></li>
+      <li><%=text_field_tag "ingredients[]"%></li>
+      <li><%=text_field_tag "ingredients[]"%></li>
+      <li><%=text_field_tag "ingredients[]"%></li>
     </ul>
   </p>
 
-  <p><input type="submit" /></p>
+  <p><%= submit_tag "Add recipe" %></p>
 </form>
+
